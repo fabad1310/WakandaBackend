@@ -7,7 +7,7 @@ class PedidosAdmin(admin.ModelAdmin):
 
 
 class DetallePedidoAdmin(admin.ModelAdmin):
-    list_display = ('pedido', 'producto', 'cantidad', 'precio')
+    list_display = ('pedido', 'producto', 'cantidad')
 
 
 admin.site.register(Pedidos, PedidosAdmin)
