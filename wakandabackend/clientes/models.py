@@ -24,6 +24,10 @@ class Clientes(models.Model):
 
     usuario = models.OneToOneField(User, on_delete=models.SET_NULL, null=True, blank=True)
     tipo = models.CharField(max_length=1, choices=TIPO_CLIENTE, default=REVENDEDOR)
+    telefono = models.IntegerField(max_length=25)
+    fecha_de_nacimiento = models.DateField(auto_now=True)
+    domicilio = models.CharField(max_length=150)
+    referencia = models.CharField(max_length=200, help_text="Como nos conociste?")
     # Agregar profile de usuario: (domicilio, telefono, etc)
 
     def __str__(self):
